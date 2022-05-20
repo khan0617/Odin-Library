@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script async defer src="./book.js"></script>
+</head>
+
+<body>
+    <h1>My Library</h1>
+    <div class="addBook">
+        <div class="title">Add a book to your library</div>
+        <div id="hiddenMsg">* All text input fields are required!</div>
+        <div class="input-container">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" placeholder="Enter book title here">
+        </div>
+
+        <div class="input-container">
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Book's author">
+        </div>
+
+        <div class="input-container">
+            <label for="pages">Number of pages</label>
+            <input type="text" id="pages" placeholder="Number of pages">
+        </div>
+
+        <div class="input-container">
+            <label for="readAlready">Already read this book?</label>
+            <input type="checkbox" id="readAlready" placeholder="Number of pages">
+        </div>
+
+        <button type="button" onclick="createBook()">Submit</button>
+    </div>
+
+    <div class="library">
+        <div class="card readAlready">
+            <div class="title">Example</div>
+            <div class="author">Author</div>
+            <div class="pages">Pages</div>
+            <button class="readButton" type="button" onclick="toggleReadStatus(this)">Toggle Read Status</button>
+            <button class="delete" type="button" onclick="deleteBook(this)">Delete From Library</button>
+        </div>
+    </div>
+</body>
+
+</html>
